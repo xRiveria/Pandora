@@ -1,6 +1,9 @@
 #include <iostream>
 #include "Bits/BitManipulation.h"
 #include "Algorithms/PrimsMST.h"
+#include "Algorithms/KruskalsMST.h"
+#include "Algorithms/Bellman-Ford.h"
+#include "Algorithms/Dijkstras.h"
 #include <vector>
 #include <set>
 #include <algorithm>
@@ -15,6 +18,11 @@ bool SortFunction(int a, int b)
 int main(int argc, int argv[])
 {
     MinimumSpanningTrees::TestCasesMST();
+    MinimumSpanningTrees::TestCasesKruskalsMST();
+    BellmanFord::TestCases_BellmanFord();
+    DijkstrasAlgorithmMatrix::TestCases_Dijkstra();
+    DijkstrasAlgorithmAdjacencyList::TestsCases_DijkstrasAdjacencyList();
+
     char derp = 'a';
     std::cout << (int)derp << "\n";
 

@@ -150,6 +150,9 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algorithms\Bellman-Ford.h" />
+    <ClInclude Include="Algorithms\Dijkstras.h" />
+    <ClInclude Include="Algorithms\KruskalsMST.h" />
     <ClInclude Include="Algorithms\LinkedLists.h" />
     <ClInclude Include="Algorithms\PrimsMST.h" />
     <ClInclude Include="Bits\BitManipulation.h" />
