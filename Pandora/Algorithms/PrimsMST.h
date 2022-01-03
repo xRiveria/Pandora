@@ -15,6 +15,7 @@ namespace MinimumSpanningTrees
         std::vector<bool> visitedNodes(totalNodes, false);
         std::vector<int> finalMSTNodes(totalNodes, -1); // Holds the vertex numbers with which they are connected. For example, finalMSTNodes[3] = 1, means 3 is connected to 1.
         std::vector<int> finalMSTWeights(totalNodes, INT_MAX);
+        // Automatically sorted by weight. 
         std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>>> priorityQueue;
 
         priorityQueue.push(std::make_pair(0, startingNode));

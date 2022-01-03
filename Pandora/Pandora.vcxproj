@@ -151,7 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithms\Bellman-Ford.h" />
+    <ClInclude Include="Algorithms\BFS.h" />
+    <ClInclude Include="Algorithms\DFS.h" />
     <ClInclude Include="Algorithms\Dijkstras.h" />
+    <ClInclude Include="Algorithms\GraphTraversals.h" />
     <ClInclude Include="Algorithms\KruskalsMST.h" />
     <ClInclude Include="Algorithms\LinkedLists.h" />
     <ClInclude Include="Algorithms\PrimsMST.h" />

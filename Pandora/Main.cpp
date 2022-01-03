@@ -4,6 +4,9 @@
 #include "Algorithms/KruskalsMST.h"
 #include "Algorithms/Bellman-Ford.h"
 #include "Algorithms/Dijkstras.h"
+#include "Algorithms/BFS.h"
+#include "Algorithms/DFS.h"
+#include "Algorithms/GraphTraversals.h"
 #include <vector>
 #include <set>
 #include <algorithm>
@@ -17,11 +20,41 @@ bool SortFunction(int a, int b)
 
 int main(int argc, int argv[])
 {
+    std::vector<int> searchStuff = { 2, 4, 5, 7, 10, 11 };
+    int target = 7;
+    int low = 0;
+    int high = searchStuff.size() - 1; // Index
+
+    while (low <= high)
+    {
+        int mid = low + (high - low) / 2; // Always locate the middle element.
+
+        if (searchStuff[mid] == target)
+        {
+            std::cout << mid << "\n";
+            break;
+        }
+
+        if (searchStuff[mid] < target)
+        {
+            low = mid + 1;
+        }
+        else if (searchStuff[mid] > target)
+        {
+            high = mid - 1;
+        }
+    }
+
+
+
     MinimumSpanningTrees::TestCasesMST();
     MinimumSpanningTrees::TestCasesKruskalsMST();
     BellmanFord::TestCases_BellmanFord();
     DijkstrasAlgorithmMatrix::TestCases_Dijkstra();
     DijkstrasAlgorithmAdjacencyList::TestsCases_DijkstrasAdjacencyList();
+    BFS::TestCases_BFS();
+    DFS::TestCase_DFS();
+    GraphTraversals::TestCases_Traversal();
 
     char derp = 'a';
     std::cout << (int)derp << "\n";
