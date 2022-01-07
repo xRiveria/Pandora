@@ -7,6 +7,9 @@
 #include "Algorithms/BFS.h"
 #include "Algorithms/DFS.h"
 #include "Algorithms/GraphTraversals.h"
+#include "DataStructures/Heaps.h"
+#include "Search/InsertionSort.h"
+#include "Search/BubbleSort.h"
 #include <vector>
 #include <set>
 #include <algorithm>
@@ -20,6 +23,10 @@ bool SortFunction(int a, int b)
 
 int main(int argc, int argv[])
 {
+    InsertionSort::TestCases_InsertionSort();
+    Heaps::TestCases_Heap();
+    BubbleSort::TestCases_BubbleSort();
+
     std::vector<int> searchStuff = { 2, 4, 5, 7, 10, 11 };
     int target = 7;
     int low = 0;
@@ -44,8 +51,6 @@ int main(int argc, int argv[])
             high = mid - 1;
         }
     }
-
-
 
     MinimumSpanningTrees::TestCasesMST();
     MinimumSpanningTrees::TestCasesKruskalsMST();

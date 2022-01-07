@@ -155,10 +155,14 @@
     <ClInclude Include="Algorithms\DFS.h" />
     <ClInclude Include="Algorithms\Dijkstras.h" />
     <ClInclude Include="Algorithms\GraphTraversals.h" />
+    <ClInclude Include="DataStructures\Heaps.h" />
     <ClInclude Include="Algorithms\KruskalsMST.h" />
     <ClInclude Include="Algorithms\LinkedLists.h" />
     <ClInclude Include="Algorithms\PrimsMST.h" />
     <ClInclude Include="Bits\BitManipulation.h" />
+    <ClInclude Include="Search\BubbleSort.h" />
+    <ClInclude Include="Search\InsertionSort.h" />
+    <ClInclude Include="Search\MergeSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

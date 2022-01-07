@@ -47,5 +47,17 @@
     <ClInclude Include="Algorithms\GraphTraversals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DataStructures\Heaps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Search\MergeSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Search\InsertionSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Search\BubbleSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
