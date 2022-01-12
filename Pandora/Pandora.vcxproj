@@ -150,6 +150,7 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algorithms\AVL.h" />
     <ClInclude Include="Algorithms\Bellman-Ford.h" />
     <ClInclude Include="Algorithms\BFS.h" />
     <ClInclude Include="Algorithms\DFS.h" />
