@@ -34,22 +34,25 @@ namespace BFS
         int startingNode = 2;
         // startingNode--;
 
-        std::queue<int> queue;
+        std::queue<int> queue; // Queue can get large depending on the size of the tree. Hence, a very wide tree isn't recommended.
         queue.push(startingNode);
-        visitedNodes[startingNode] = true;
+        visitedNodes[startingNode] = true; // We use a boolean to ensure that we have not visited the nodes before, but that isn't necessary. 
         
         while (!queue.empty())
         {
             int currentVertex = queue.front();
-            std::cout << currentVertex << " ";
+            std::cout << currentVertex << " "; // Retrieve value - print it, save it to a list or whatsoever.
             queue.pop();
 
-            for (auto& neighbour : ajacencyList[currentVertex])
+            //    9
+            //  4   20
+            // 1 6 15 170
+ 
+            for (auto& neighbour : ajacencyList[currentVertex]) // Add both children (where they exist) to the queue.
             {
                 if (!visitedNodes[neighbour])
                 {
                     visitedNodes[neighbour] = true;
-                    // finalDistances[neighbour] = finalDistances[currentVertex] + 1;
                     queue.push(neighbour);
                 }
             }
@@ -57,4 +60,6 @@ namespace BFS
 
         std::cout << std::endl;
     }
+
+
 }

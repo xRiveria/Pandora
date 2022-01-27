@@ -150,20 +150,27 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Algorithms\AVL.h" />
+    <ClInclude Include="Algorithms\Red-Black.h" />
     <ClInclude Include="Algorithms\Bellman-Ford.h" />
     <ClInclude Include="Algorithms\BFS.h" />
     <ClInclude Include="Algorithms\DFS.h" />
     <ClInclude Include="Algorithms\Dijkstras.h" />
     <ClInclude Include="Algorithms\GraphTraversals.h" />
+    <ClInclude Include="Algorithms\UniversalValueTree.h" />
+    <ClInclude Include="Concepts\TowerOfHanoi.h" />
     <ClInclude Include="DataStructures\Heaps.h" />
     <ClInclude Include="Algorithms\KruskalsMST.h" />
     <ClInclude Include="Algorithms\LinkedLists.h" />
     <ClInclude Include="Algorithms\PrimsMST.h" />
     <ClInclude Include="Bits\BitManipulation.h" />
+    <ClInclude Include="Examples\BinaryTreeDummy.h" />
     <ClInclude Include="Search\BubbleSort.h" />
     <ClInclude Include="Search\InsertionSort.h" />
     <ClInclude Include="Search\MergeSort.h" />
+    <ClInclude Include="Time\Stopwatch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\OneDrive\Desktop\Stuff.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

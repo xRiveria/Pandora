@@ -1,18 +1,7 @@
 #include <iostream>
-#include "Bits/BitManipulation.h"
-#include "Algorithms/PrimsMST.h"
-#include "Algorithms/KruskalsMST.h"
-#include "Algorithms/Bellman-Ford.h"
-#include "Algorithms/Dijkstras.h"
 #include "Algorithms/BFS.h"
-#include "Algorithms/DFS.h"
-#include "Algorithms/GraphTraversals.h"
-#include "DataStructures/Heaps.h"
-#include "Search/InsertionSort.h"
-#include "Search/BubbleSort.h"
-#include <vector>
-#include <set>
-#include <algorithm>
+#include "Examples/BinaryTreeDummy.h"
+#include "Time/Stopwatch.h"
 
 using namespace std;
 
@@ -23,6 +12,33 @@ bool SortFunction(int a, int b)
 
 int main(int argc, int argv[])
 {
+    //       9
+    //   4      20
+    // 1   6  15  170
+    {
+        Time::Stopwatch stopWatch("Linear Search");
+    }
+
+    {
+        Time::Stopwatch stopWatch("Binary Search");      
+
+        Trees::BinarySearchTree* ourTree = new Trees::BinarySearchTree();
+
+        ourTree->Insert(9);
+        ourTree->Insert(4);
+        ourTree->Insert(6);
+        ourTree->Insert(20);
+        ourTree->Insert(170);
+        ourTree->Insert(15);
+        ourTree->Insert(1);
+
+        ourTree->BreadthFirstSearch();
+    }
+
+
+
+    /*
+    TOH::TestCases_TowerOfHanoi();
     InsertionSort::TestCases_InsertionSort();
     Heaps::TestCases_Heap();
     BubbleSort::TestCases_BubbleSort();
@@ -121,4 +137,5 @@ int main(int argc, int argv[])
 
     Bits::TurnOnRightMost0Bit(6);
     return 0;
+    */
 }
