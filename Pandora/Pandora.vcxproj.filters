@@ -74,6 +74,9 @@
     <ClInclude Include="Examples\BinaryTreeDummy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Examples\DummyGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\..\OneDrive\Desktop\Stuff.txt" />

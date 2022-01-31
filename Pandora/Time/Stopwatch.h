@@ -12,6 +12,7 @@ namespace Time
     public:
         Stopwatch(const std::string& watchName) : m_WatchName(watchName)
         {
+            std::cout << "==============================================" << "\n";
             m_Start = std::chrono::high_resolution_clock::now();
         }
 

@@ -164,6 +164,7 @@
     <ClInclude Include="Algorithms\PrimsMST.h" />
     <ClInclude Include="Bits\BitManipulation.h" />
     <ClInclude Include="Examples\BinaryTreeDummy.h" />
+    <ClInclude Include="Examples\DummyGraph.h" />
     <ClInclude Include="Search\BubbleSort.h" />
     <ClInclude Include="Search\InsertionSort.h" />
     <ClInclude Include="Search\MergeSort.h" />

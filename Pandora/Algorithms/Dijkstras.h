@@ -123,6 +123,8 @@ namespace DijkstrasAlgorithmAdjacencyList
         priorityQueue.push({ 0, startingVertex }); // Always push with distance first to maintain our priority queue.
         finalDistances[startingVertex] = 0; // Distance to starting vertex is always 0.
 
+        // Stores all paths and arranges them in ascending order with the lowest cost first. 
+        // Only insert our best estimates possible.
         while (!priorityQueue.empty())
         {
             int currentVertex = priorityQueue.top().second;

@@ -2,6 +2,7 @@
 #include "Algorithms/BFS.h"
 #include "Examples/BinaryTreeDummy.h"
 #include "Time/Stopwatch.h"
+#include "Examples/DummyGraph.h"
 
 using namespace std;
 
@@ -12,27 +13,55 @@ bool SortFunction(int a, int b)
 
 int main(int argc, int argv[])
 {
+    Graphs::Graph* ourGraph = new Graphs::Graph(7); // Use Resize, which is not 0 inclusive.
+    ourGraph->AddEdges(3, 1);
+    ourGraph->AddEdges(3, 4);
+    ourGraph->AddEdges(4, 2);
+    ourGraph->AddEdges(4, 5);
+    ourGraph->AddEdges(1, 2);
+    ourGraph->AddEdges(1, 0);
+    ourGraph->AddEdges(0, 2);
+    ourGraph->AddEdges(6, 5);
+
+    ourGraph->ShowConnections();
+
     //       9
-    //   4      20
-    // 1   6  15  170
+    //   4       20
+    // 1   6   15  170
+
+    Trees::BinarySearchTree* ourTree = new Trees::BinarySearchTree();
+    ourTree->Insert(9);
+    ourTree->Insert(4);
+    ourTree->Insert(6);
+    ourTree->Insert(20);
+    ourTree->Insert(170);
+    ourTree->Insert(15);
+    ourTree->Insert(1);
+    ourTree->Remove(6);
+
     {
-        Time::Stopwatch stopWatch("Linear Search");
+        Time::Stopwatch stopWatch("Breadth First Search Iterative");
+        ourTree->BreadthFirstSearchIterative();
     }
 
     {
-        Time::Stopwatch stopWatch("Binary Search");      
+        Time::Stopwatch stopWatch("Breadth First Search Recursive");      
+        ourTree->BreadthFirstSearchRecursive();
+    }
 
-        Trees::BinarySearchTree* ourTree = new Trees::BinarySearchTree();
+    {
+        Time::Stopwatch stopWatch("Depth First Search - InOrder");
+        ourTree->DFS_InOrder();
+    }
 
-        ourTree->Insert(9);
-        ourTree->Insert(4);
-        ourTree->Insert(6);
-        ourTree->Insert(20);
-        ourTree->Insert(170);
-        ourTree->Insert(15);
-        ourTree->Insert(1);
+    {
+        Time::Stopwatch stopWatch("Depth First Search - PreOrder");
+        ourTree->DFS_PreOrder();
+    }
 
-        ourTree->BreadthFirstSearch();
+    {
+        Time::Stopwatch stopWatch("Depth First Search - PostOrder");
+        ourTree->DFS_PostOrder();
     }
 
 
