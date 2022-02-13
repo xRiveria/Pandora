@@ -5,22 +5,23 @@ namespace InsertionSort
 {
     void InsertionSort(int arr[], int arraySize)
     {
-        int i, key, j;
-        for (i = 1; i < arraySize; i++)
+        int unsortedIndex, unsortedValue, lastSortedIndex;
+        // Assume that index 0 is already sorted. 
+        for (unsortedIndex = 1; unsortedIndex < arraySize; unsortedIndex++)
         {
             // Selects the first unsorted array. 
-            key = arr[i];
-            j = i - 1;
+            unsortedValue = arr[unsortedIndex];
+            lastSortedIndex = unsortedIndex - 1; // This will be the last index of the already sorted items in our list.
 
-            // Move elements of arr[0...i-1] that are greater than key to one position ahead of their current position to create a room for the unsorted element.
-            while (j >= 0 && arr[j] > key)
+            // Move all values in the sorted list greater than the unsorted value up by 1 position to make room for our child.
+            while (lastSortedIndex >= 0 && arr[lastSortedIndex] > unsortedValue)
             {
-                arr[j + 1] = arr[j];
-                j = j - 1;
+                arr[lastSortedIndex + 1] = arr[lastSortedIndex];
+                lastSortedIndex = lastSortedIndex - 1; // Decrement the index here. This should land at the key 1 smaller than the element to be inserted.
             }
 
             // Place key at after the element just smaller than it. 
-            arr[j + 1] = key;
+            arr[lastSortedIndex + 1] = unsortedValue;
         }
     }
 

@@ -9,7 +9,7 @@ namespace BubbleSort
         int i, j;
         for (i = 0; i < arraySize - 1; i++)
         {
-            for (j = 0; j < arraySize - i - 1; j++)
+            for (j = 0; j < arraySize - 1 - i; j++) // Minusing i here allows us to avoid comparing the already sorted elements.
             {
                 if (arr[j] > arr[j + 1])
                 {

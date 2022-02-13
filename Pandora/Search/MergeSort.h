@@ -3,20 +3,28 @@
 
 namespace Sorting
 {
-    void Merge(int* arr, int leftIndex, int middleIndex, int rightIndex)
+    void Merge(int ourArrayp[], int leftIndex, int middleIndex, int rightIndex)
     {
+        // Create our two subarrays.
+        const int arrayOneSize = middleIndex - leftIndex + 1;
+        const int arrayTwoSize = rightIndex - middleIndex;
+
+        // int leftArray[arrayOneSize];
+        // int rightArray[arrayTwoSize];
     }
 
-    void MergeSort(int* arr, int leftIndex, int rightIndex)
+    // Divide the array into two subarrays, sort them and merge them.
+    void MergeSort(int ourArray[], int leftIndex, int rightIndex)
     {
-        int middleIndex;
         if (leftIndex < rightIndex)
         {
-            middleIndex = leftIndex + (rightIndex - leftIndex) / 2;
-            // Sort the first and second arrays.
-            MergeSort(arr, leftIndex, middleIndex);
-            MergeSort(arr, leftIndex + 1, rightIndex);
-            Merge(arr, leftIndex, middleIndex, rightIndex);
+            // M is the middle index where the array is divided into two subarrays.
+            int middleIndex = std::floor(leftIndex + (rightIndex - leftIndex) / 2);
+            MergeSort(ourArray, leftIndex, middleIndex);
+            MergeSort(ourArray, middleIndex + 1, rightIndex);
+
+            // Merge the sorted subarrays.
+            Merge(ourArray, leftIndex, middleIndex, rightIndex);
         }
     }
 
@@ -25,7 +33,7 @@ namespace Sorting
         int arraySize = 6;
         int arr[] = { 14, 20, 78, 98, 20, 45 };
         
-        MergeSort(arr, 0, 6 - 1); // -1 for last index.
+        // MergeSort(arr, 6); // -1 for last index.
 
         std::cout << "Sorted Array: \n";
         for (int i = 0; i < arraySize; i++)

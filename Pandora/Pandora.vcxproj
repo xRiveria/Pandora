@@ -158,6 +158,7 @@
     <ClInclude Include="Algorithms\GraphTraversals.h" />
     <ClInclude Include="Algorithms\UniversalValueTree.h" />
     <ClInclude Include="Concepts\TowerOfHanoi.h" />
+    <ClInclude Include="DataStructures\HashTable.h" />
     <ClInclude Include="DataStructures\Heaps.h" />
     <ClInclude Include="Algorithms\KruskalsMST.h" />
     <ClInclude Include="Algorithms\LinkedLists.h" />
@@ -168,6 +169,8 @@
     <ClInclude Include="Search\BubbleSort.h" />
     <ClInclude Include="Search\InsertionSort.h" />
     <ClInclude Include="Search\MergeSort.h" />
+    <ClInclude Include="Search\QuickSort.h" />
+    <ClInclude Include="Search\SelectionSort.h" />
     <ClInclude Include="Time\Stopwatch.h" />
   </ItemGroup>
   <ItemGroup>

@@ -168,3 +168,39 @@ namespace DijkstrasAlgorithmAdjacencyList
         std::cout << std::endl;
     }
 }
+
+namespace AnotherDijkstra
+{
+    class WeightedGraph
+    {
+    public:
+        WeightedGraph()
+        {
+            m_AjacencyList.resize(5);
+        }
+
+        void AddEdges(int from, int to, int weight)
+        {
+            from--, to--; 
+            m_AjacencyList[from].push_back({ to, weight });
+            m_AjacencyList[to].push_back({ from, weight });
+        }
+
+        void Dijkstra()
+        {
+
+        }
+
+    private:
+        std::vector<std::vector<std::pair<int, int>>> m_AjacencyList; // Node 1: Node 2, 50
+    };
+
+    void TestCases()
+    {
+        // Cities will start from 1 to make things easier to comprehend textually.
+        WeightedGraph weightedGraph;
+        weightedGraph.AddEdges(1, 2, 5);
+        weightedGraph.AddEdges(1, 3, 10);
+        weightedGraph.AddEdges(2, 1, 50);
+    }
+}
